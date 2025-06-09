@@ -14,6 +14,12 @@ namespace P2_Marcus_2_ano
         public DateTime Data { get; }
         public decimal ValorTotal => Itens.Sum(i => i.Subtotal);
 
-
+        public Pedido(int id, Cliente cliente, List<ItemPedido> itens)
+        {
+            Id = id;
+            Cliente = cliente;
+            Itens = itens;
+            Data = DateTime.Now;
+        }
     }
 }
