@@ -8,5 +8,12 @@ namespace P2_Marcus_2_ano
 {
     public class Pedido
     {
+        public int Id { get; }
+        public Cliente Cliente { get; }
+        public List<ItemPedido> Itens { get; }
+        public DateTime Data { get; }
+        public decimal ValorTotal => Itens.Sum(i => i.Subtotal);
+
+
     }
 }
