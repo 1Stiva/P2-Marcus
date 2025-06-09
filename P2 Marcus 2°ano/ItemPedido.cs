@@ -11,5 +11,12 @@ namespace P2_Marcus_2_ano
         public Produto Produto { get; }
         public int Quantidade { get; }
 
+        public ItemPedido(Produto produto, int quantidade)
+        {
+            Produto = produto;
+            Quantidade = quantidade;
+        }
+
+        public decimal Subtotal => Produto.Preço * Quantidade;
     }
 }
